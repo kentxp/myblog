@@ -17,7 +17,7 @@ public class MyblogApplication {
 		SpringApplication.run(MyblogApplication.class, args);
 	}
 
-	@Bean
+//	@Bean
 	public EmbeddedServletContainerFactory servletContainer() {
 		TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
 			@Override
@@ -34,7 +34,7 @@ public class MyblogApplication {
 		return tomcat;
 	}
 
-	@Bean
+//	@Bean
 	public Connector httpConnector() {
 		Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
 		connector.setScheme("http");
